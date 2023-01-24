@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  # MariaDB
+  mariadb:
+    image: mariadb
+    container_name: mariadb-container
+    restart: always
+    ports:
+      - "3306:3306"
+    entrypoint:
+      - MYSQL_ROOT_PASSWORD=43214321

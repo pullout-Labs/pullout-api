@@ -1,0 +1,13 @@
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+
+  profiles:
+    include:
+      - "core-prod"
+
+# Logging Info
+logging:
+  level:
+    org.springframework: info

@@ -1,0 +1,12 @@
+spring:
+  config:
+    activate:
+      on-profile: "local"
+  profiles:
+    include:
+      - "core-local"
+
+# Logging Info
+logging:
+  level:
+    org.springframework: debug
