@@ -1,0 +1,11 @@
+server:
+  port: 10000
+
+spring:
+  application:
+    name: "PULLOUT-BATCH-SERVICE"
+  profiles:
+    active: "local"
+    default: "local"
+  config:
+    use-legacy-processing: true
