@@ -26,19 +26,16 @@ class AccountUserServiceImpl(
         userPassword: String,
         userName: String,
         userNickname: String
-    ): AccountUserDto {
-        val user = AccountUser(
-            userId = this.getNotDuplicatedUserId(userId),
-            userPassword = passwordEncoder.encode(userPassword),
-            userNickname = this.getNotDuplicatedUserNickname(userNickname),
-            userName = userName
+    ): AccountUserDto = AccountUserDto.ofEntity(
+        userRepository.save(
+            AccountUser(
+                userId = this.getNotDuplicatedUserId(userId),
+                userPassword = passwordEncoder.encode(userPassword),
+                userNickname = this.getNotDuplicatedUserNickname(userNickname),
+                userName = userName
+            ).also { it.addUserRole(UserRole.USER) } // set user Role))
         )
-        user.addUserRole(UserRole.USER)
-
-
-        return AccountUserDto.ofEntity(userRepository.save(user))
-
-    }
+    )
 
 
     /**
