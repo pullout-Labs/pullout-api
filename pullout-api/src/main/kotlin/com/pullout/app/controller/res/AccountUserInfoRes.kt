@@ -8,7 +8,8 @@ import java.util.*
 data class AccountUserInfoRes(
     val id: UUID = UUID.randomUUID(),
     val userId: String,
-    val userState: UserState?,
+    val userState: UserState,
+    val userNickname: String,
     val userRoleList: List<UserRole>?
 ) {
 
@@ -19,6 +20,7 @@ data class AccountUserInfoRes(
                 id = dto.id,
                 userId = dto.userId,
                 userState = dto.userState,
+                userNickname = dto.userNickname,
                 userRoleList = dto.userRoleList
             )
         }

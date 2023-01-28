@@ -12,6 +12,7 @@ data class AccountUserDto(
     val userPassword: String,
     val userState: UserState,
     val userNickname: String,
+    val userName: String,
     val userCarList: List<AccountCarDto> = listOf(),
     val userRoleList: List<UserRole> = listOf()
 ) {
@@ -25,6 +26,7 @@ data class AccountUserDto(
                 userId = entity.userId,
                 userPassword = entity.userPassword,
                 userNickname = entity.userNickname,
+                userName = entity.userName,
                 userState = entity.userState,
                 userCarList = entity.carList.stream().map { AccountCarDto.ofEntity(it) }.toList(),
                 userRoleList = entity.userRoles

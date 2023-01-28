@@ -12,6 +12,7 @@ class AccountUser(
     userId: String,
     userPassword : String,
     userNickname : String,
+    userName : String
 ) : PrimaryKeyEntity() {
 
     /**
@@ -35,6 +36,9 @@ class AccountUser(
     var userNickname : String = userNickname
         protected set
 
+    @Column(name = "user_name", nullable = false)
+    var userName: String = userName
+        protected set
     /**
      * 사용자 상태
      */
