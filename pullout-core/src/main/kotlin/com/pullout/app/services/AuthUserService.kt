@@ -1,4 +1,4 @@
-package com.pullout.app.services.impl
+package com.pullout.app.services
 
 import com.pullout.app.dto.AccountUserDto
 

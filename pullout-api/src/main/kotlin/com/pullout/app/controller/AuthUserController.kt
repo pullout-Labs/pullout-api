@@ -3,7 +3,7 @@ package com.pullout.app.controller
 import com.pullout.app.controller.req.RegisterUserReq
 import com.pullout.app.controller.res.AccountUserInfoRes
 import com.pullout.app.controller.support.GlobalControllerSupport
-import com.pullout.app.services.impl.AuthUserService
+import com.pullout.app.services.AuthUserService
 import mu.KLogging
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
