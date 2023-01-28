@@ -1,0 +1,18 @@
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+
+  profiles:
+    include:
+      - "core-prod"
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: never
+    scheduler-name: "pullout-scheduler"
+
+# Logging Info
+logging:
+  level:
+    org.springframework: info

@@ -1,0 +1,17 @@
+spring:
+  config:
+    activate:
+      on-profile: "local"
+  profiles:
+    include:
+      - "core-local"
+  quartz:
+    job-store-type: jdbc
+    jdbc:
+      initialize-schema: always
+    scheduler-name: "pullout-local-scheduler"
+
+# Logging Info
+logging:
+  level:
+    org.springframework: debug
