@@ -7,4 +7,8 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface AccountUserRepository : JpaRepository<AccountUser, PrimaryKeyEntity> {
+
+    fun findFirstByUserId(userId : String) : AccountUser?
+
+    fun findFirstByUserNickname(userNickname : String) : AccountUser?
 }

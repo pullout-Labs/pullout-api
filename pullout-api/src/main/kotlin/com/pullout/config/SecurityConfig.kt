@@ -1,4 +1,4 @@
-package com.pullout.app.config
+package com.pullout.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -16,6 +16,7 @@ class SecurityConfig {
 
         http.authorizeHttpRequests()
             .antMatchers("/").permitAll()
+            .antMatchers("/auth/**").permitAll()
             .antMatchers("/healthcheck").permitAll()
             .antMatchers("/mypage").hasRole("USER")
             .anyRequest().authenticated()

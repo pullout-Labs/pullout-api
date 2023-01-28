@@ -1,11 +1,13 @@
-package com.pullout.app.controller.healthCheck
+package com.pullout.app.controller
 
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
 @RestController
-class HealthCheckController {
+@RequestMapping("/server")
+class ServerInfoController {
 
-    @GetMapping("/healthcheck")
+    @GetMapping("/health")
     fun healthcheck() : String = "health check !"
 }
