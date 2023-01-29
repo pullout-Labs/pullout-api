@@ -3,6 +3,7 @@ package com.pullout.app.services.impl
 import com.pullout.app.domains.AccountUser
 import com.pullout.app.domains.repositories.AccountUserRepository
 import com.pullout.app.dto.AccountUserDto
+import com.pullout.app.services.AuthUserService
 import com.pullout.enums.UserRole
 import mu.KLogging
 import org.springframework.dao.DuplicateKeyException
