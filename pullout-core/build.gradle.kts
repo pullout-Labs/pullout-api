@@ -7,12 +7,12 @@ tasks.getByName<Jar>("jar") {
 }
 
 dependencies {
-    api("org.springframework.boot:spring-boot-starter-data-jpa")
+    api ("org.springframework.boot:spring-boot-starter-data-jpa")
     runtimeOnly("com.h2database:h2")
     implementation("org.mariadb.jdbc:mariadb-java-client")
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation ("org.springframework.boot:spring-boot-starter-security")
-    implementation ("io.jsonwebtoken:jjwt:0.9.1")
+    api ("org.springframework.boot:spring-boot-starter-security")
+    api ("io.jsonwebtoken:jjwt:0.9.1")
 
 
 }
