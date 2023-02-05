@@ -26,3 +26,11 @@ allOpen {
 noArg {
     annotation("javax.persistence.Entity")
 }
+
+sourceSets {
+    test {
+        java {
+            setSrcDirs(listOf("./src/test/kotlin/integration", "./src/test/kotlin/unit")) // test Dirs
+        }
+    }
+}

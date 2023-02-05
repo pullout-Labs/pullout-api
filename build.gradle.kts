@@ -60,5 +60,14 @@ subprojects {
         implementation("org.springframework.boot:spring-boot-starter-validation")
         implementation("io.github.microutils:kotlin-logging-jvm:2.0.11")
 
+        // for test code
+        testImplementation("org.springframework.boot:spring-boot-starter-test")
+        testImplementation("io.mockk:mockk:1.12.0")
+        testImplementation("com.ninja-squad:springmockk:3.0.1")
+
+    }
+
+    tasks.withType<Test> {
+        useJUnitPlatform()
     }
 }
