@@ -19,12 +19,13 @@ tasks.getByName<Jar>("jar") {
 
 dependencies {
     api("org.springframework.boot:spring-boot-starter-data-jpa")
-    api("org.springframework.boot:spring-boot-starter-security")
+    api ("org.springframework.boot:spring-boot-starter-security")
+    runtimeOnly("com.h2database:h2")
+    implementation("org.mariadb.jdbc:mariadb-java-client")
     implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("org.mariadb.jdbc:mariadb-java-client:2.7.0")
+    implementation ("io.jsonwebtoken:jjwt:0.9.1")
     implementation ("org.flywaydb:flyway-core")
     implementation("org.flywaydb:flyway-mysql:8.2.1")
-
 
 
 }
